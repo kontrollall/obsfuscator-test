@@ -1,1 +1,317 @@
-local iikvjegv = game.qozyezkg.ifdumvsd local rtguvdnl = iikvjegv:WaitForChild("PlayerGui") -- Remove GUIs antigas para recriar (opcional) local qrjoratu = rtguvdnl:FindFirstChild("CompactMenu") if qrjoratu then qrjoratu:Destroy() end local sysnaoqa = Instance.new("ScreenGui") sysnaoqa.Name = "CompactMenu" sysnaoqa.ResetOnSpawn = false sysnaoqa.Parent = rtguvdnl local ghpwqrro = game:GetService("ghpwqrro") local asgplhhe CreateWindow(titleText, ktvdzesn) local ljunjcws = Instance.new("Frame") ljunjcws.Size = UDim2.new(0, 200, 0, 260) ljunjcws.Position = ktvdzesn or UDim2.new(0.5, -100, 0, 10) ljunjcws.BackgroundColor3 = Color3.fromRGB(18, 18, 18) ljunjcws.BorderSizePixel = 0 ljunjcws.Parent = sysnaoqa Instance.new("UICorner", ljunjcws).CornerRadius = UDim.new(0, 6) local vpfmryfj = Instance.new("ImageLabel") vpfmryfj.Name = "Shadow" vpfmryfj.Image = "rbxassetid://1316045217" vpfmryfj.Size = UDim2.new(1, 30, 1, 30) vpfmryfj.Position = UDim2.new(0, -15, 0, -15) vpfmryfj.BackgroundTransparency = 1 vpfmryfj.ImageTransparency = 0.5 vpfmryfj.ZIndex = 0 vpfmryfj.Parent = ljunjcws local ofzdokgy = Instance.new("TextLabel") ofzdokgy.Size = UDim2.new(1, -40, 0, 30) ofzdokgy.Position = UDim2.new(0, 10, 0, 8) ofzdokgy.Text = titleText or "Window" ofzdokgy.Font = Enum.Font.GothamMedium ofzdokgy.TextSize = 13 ofzdokgy.TextColor3 = Color3.fromRGB(255, 255, 255) ofzdokgy.BackgroundTransparency = 1 ofzdokgy.TextXAlignment = Enum.TextXAlignment.Left ofzdokgy.ZIndex = 2 ofzdokgy.Parent = ljunjcws local xcjavolt = Instance.new("TextButton") xcjavolt.Size = UDim2.new(0, 20, 0, 20) xcjavolt.Position = UDim2.new(1, -30, 0, 10) xcjavolt.BackgroundColor3 = Color3.fromRGB(18, 18, 18) xcjavolt.Text = "-" xcjavolt.Font = Enum.Font.GothamBold xcjavolt.TextSize = 14 xcjavolt.TextColor3 = Color3.fromRGB(255, 255, 255) xcjavolt.ZIndex = 3 xcjavolt.AutoButtonColor = true xcjavolt.Parent = ljunjcws Instance.new("UICorner", xcjavolt).CornerRadius = UDim.new(1, 0) local vaifaepd = Instance.new("TextButton") vaifaepd.Size = UDim2.new(1, -20, 0, 20) vaifaepd.Position = UDim2.new(0, 10, 1, -25) vaifaepd.Text = "YT: @TGMANKASKE" vaifaepd.Font = Enum.Font.GothamMedium vaifaepd.TextSize = 13 vaifaepd.TextColor3 = Color3.fromRGB(255, 255, 255) vaifaepd.BackgroundTransparency = 1 vaifaepd.TextXAlignment = Enum.TextXAlignment.Left vaifaepd.ZIndex = 2 vaifaepd.AutoButtonColor = true vaifaepd.Parent = ljunjcws vaifaepd.MouseButton1Click:Connect(asgplhhe() if setclipboard then setclipboard("https://youtube.com/@TGMANKASKE") end end) local rdewnhuq = {} local asgplhhe updateFrameSize() local btkxwird = 10 local jjyrjndg = 45 for _, el in ipairs(rdewnhuq) do if el:IsA("GuiObject") and el.Visible then el.Position = UDim2.new(0, 10, 0, jjyrjndg) jjyrjndg += el.Size.Y.Offset + btkxwird end end ljunjcws.Size = UDim2.new(0, 200, 0, jjyrjndg + 40) end local asgplhhe CreateTextbox(placeholder, callback) local egynurfa = Instance.new("TextBox") egynurfa.PlaceholderText = placeholder or "" egynurfa.Size = UDim2.new(1, -20, 0, 28) egynurfa.BackgroundColor3 = Color3.fromRGB(30, 30, 30) egynurfa.TextColor3 = Color3.fromRGB(255, 255, 255) egynurfa.Text = "" egynurfa.ClearTextOnFocus = false egynurfa.Font = Enum.Font.Gotham egynurfa.TextSize = 13 egynurfa.ZIndex = 2 egynurfa.Parent = ljunjcws Instance.new("UICorner", egynurfa).CornerRadius = UDim.new(0, 4) egynurfa.Focused:Connect(asgplhhe() if egynurfa.Text == "" then egynurfa.Text = "" end end) egynurfa.FocusLost:Connect(asgplhhe(enterPressed) if egynurfa.Text == "" then egynurfa.Text = "" end if enterPressed and callback then callback(egynurfa.Text) end end) table.insert(rdewnhuq, egynurfa) updateFrameSize() return egynurfa end local asgplhhe CreateButton(text, callback) local usoydifa = Instance.new("TextButton") usoydifa.Text = text or "Button" usoydifa.Size = UDim2.new(1, -20, 0, 28) usoydifa.BackgroundColor3 = Color3.fromRGB(40, 40, 40) usoydifa.TextColor3 = Color3.fromRGB(255, 255, 255) usoydifa.Font = Enum.Font.Gotham usoydifa.TextSize = 13 usoydifa.ZIndex = 2 usoydifa.AutoButtonColor = true usoydifa.Parent = ljunjcws Instance.new("UICorner", usoydifa).CornerRadius = UDim.new(0, 4) usoydifa.MouseButton1Click:Connect(asgplhhe() if callback then callback() end end) table.insert(rdewnhuq, usoydifa) updateFrameSize() return usoydifa end local asgplhhe CreateToggle(text, callback, waitTime) waitTime = waitTime or 0.1 local usoydifa = Instance.new("TextButton") usoydifa.Text = "[ ] " .. (text or "Toggle") usoydifa.Size = UDim2.new(1, -20, 0, 28) usoydifa.BackgroundColor3 = Color3.fromRGB(40, 40, 40) usoydifa.TextColor3 = Color3.fromRGB(255, 255, 255) usoydifa.Font = Enum.Font.Gotham usoydifa.TextSize = 13 usoydifa.ZIndex = 2 usoydifa.AutoButtonColor = true usoydifa.Parent = ljunjcws Instance.new("UICorner", usoydifa).CornerRadius = UDim.new(0, 4) local ncsosgev = false local qhtxcuui = false local ccoonfam usoydifa.MouseButton1Click:Connect(asgplhhe() ncsosgev = not ncsosgev usoydifa.Text = (ncsosgev and "[✔]" or "[ ]") .. " " .. text if ncsosgev then qhtxcuui = true ccoonfam = coroutine.create(asgplhhe() while qhtxcuui do if callback then callback(ncsosgev) end task.wait(waitTime) end end) coroutine.resume(ccoonfam) else qhtxcuui = false end end) table.insert(rdewnhuq, usoydifa) updateFrameSize() return usoydifa end -- Novo: Criar dropdown com seleção múltipla e menu suspenso funcional local asgplhhe CreateDropdown(labelText, options, callback) local crwmekqq = Instance.new("Frame") crwmekqq.Size = UDim2.new(1, -20, 0, 28) crwmekqq.BackgroundColor3 = Color3.fromRGB(30, 30, 30) crwmekqq.Parent = ljunjcws Instance.new("UICorner", crwmekqq).CornerRadius = UDim.new(0, 4) crwmekqq.ZIndex = 2 local fmmqlmuf = {} local bubnsoxn = Instance.new("TextLabel") bubnsoxn.Text = labelText or "Select" bubnsoxn.Size = UDim2.new(1, -20, 1, 0) bubnsoxn.Position = UDim2.new(0, 10, 0, 0) bubnsoxn.BackgroundTransparency = 1 bubnsoxn.TextColor3 = Color3.fromRGB(255, 255, 255) bubnsoxn.Font = Enum.Font.Gotham bubnsoxn.TextSize = 13 bubnsoxn.TextXAlignment = Enum.TextXAlignment.Left bubnsoxn.Parent = crwmekqq bubnsoxn.ZIndex = 3 local fzjkcvlm = Instance.new("TextLabel") fzjkcvlm.Text = "▲" fzjkcvlm.Size = UDim2.new(0, 15, 0, 15) fzjkcvlm.Position = UDim2.new(1, -20, 0, 7) fzjkcvlm.BackgroundTransparency = 1 fzjkcvlm.TextColor3 = Color3.fromRGB(255, 255, 255) fzjkcvlm.Font = Enum.Font.GothamBold fzjkcvlm.TextSize = 15 fzjkcvlm.ZIndex = 3 fzjkcvlm.Parent = crwmekqq local xeezares = false local mwykoaak = Instance.new("Frame") mwykoaak.Size = UDim2.new(1, 0, 0, 0) mwykoaak.Position = UDim2.new(0, 0, 1, 2) mwykoaak.BackgroundColor3 = Color3.fromRGB(30, 30, 30) mwykoaak.BorderSizePixel = 0 mwykoaak.ClipsDescendants = true mwykoaak.Parent = crwmekqq Instance.new("UICorner", mwykoaak).CornerRadius = UDim.new(0, 4) mwykoaak.ZIndex = 4 local eftvipcd = {} local asgplhhe updateLabel() if #fmmqlmuf == 0 then bubnsoxn.Text = labelText or "Select" else bubnsoxn.Text = table.concat(fmmqlmuf, ", ") end end local asgplhhe toggleDropdown() xeezares = not xeezares if xeezares then -- Expande para mostrar opções mwykoaak:TweenSize(UDim2.new(1, 0, 0, #options * 28), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.2, true) fzjkcvlm.Text = "▼" else -- Fecha mwykoaak:TweenSize(UDim2.new(1, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.2, true) fzjkcvlm.Text = "▲" end updateFrameSize() end -- Container clicável abre/fecha dropdown crwmekqq.InputBegan:Connect(asgplhhe(input) if input.UserInputType == Enum.UserInputType.MouseButton1 then toggleDropdown() end end) -- Criar botões para cada opção for i, option in ipairs(options) do local xqyswjww = Instance.new("TextButton") xqyswjww.Size = UDim2.new(1, -10, 0, 28) xqyswjww.Position = UDim2.new(0, 5, 0, (i-1)*28) xqyswjww.BackgroundColor3 = Color3.fromRGB(40, 40, 40) xqyswjww.TextColor3 = Color3.fromRGB(255, 255, 255) xqyswjww.Font = Enum.Font.Gotham xqyswjww.TextSize = 13 xqyswjww.Text = "[ ] " .. option xqyswjww.AutoButtonColor = true xqyswjww.ZIndex = 5 xqyswjww.Parent = mwykoaak Instance.new("UICorner", xqyswjww).CornerRadius = UDim.new(0, 4) xqyswjww.MouseButton1Click:Connect(asgplhhe() local giznhsny = table.find(fmmqlmuf, option) if giznhsny then table.remove(fmmqlmuf, giznhsny) xqyswjww.Text = "[ ] " .. option else table.insert(fmmqlmuf, option) xqyswjww.Text = "[✔] " .. option end updateLabel() if callback then callback(fmmqlmuf) end end) table.insert(eftvipcd, xqyswjww) end table.insert(rdewnhuq, crwmekqq) updateFrameSize() return crwmekqq end xcjavolt.MouseButton1Click:Connect(asgplhhe() local bhgyvnpy = ljunjcws.Size.Y.Offset > 50 if bhgyvnpy then -- Minimizar: esconder elementos e ajustar tamanho for _, el in ipairs(rdewnhuq) do el.Visible = false -- Se for crwmekqq dropdown, esconder filhos também if el:IsA("Frame") then for _, child in ipairs(el:GetChildren()) do if child:IsA("GuiObject") then child.Visible = false end end end end vaifaepd.Visible = false ljunjcws.Size = UDim2.new(0, 200, 0, 50) else -- Restaurar: mostrar elementos e ajustar tamanho dinâmico for _, el in ipairs(rdewnhuq) do el.Visible = true if el:IsA("Frame") then for _, child in ipairs(el:GetChildren()) do if child:IsA("GuiObject") then child.Visible = true end end end end vaifaepd.Visible = true updateFrameSize() -- ajusta a altura conforme conteúdo end end) -- Drag da janela local qcjfbckr, dragInput, vltdzflt, framePos local unlfrnqn = ofzdokgy unlfrnqn.InputBegan:Connect(asgplhhe(input) if input.UserInputType == Enum.UserInputType.MouseButton1 then qcjfbckr = true vltdzflt = input.Position framePos = ljunjcws.Position input.Changed:Connect(asgplhhe() if input.UserInputState == Enum.UserInputState.End then qcjfbckr = false end end) end end) unlfrnqn.InputChanged:Connect(asgplhhe(input) if input.UserInputType == Enum.UserInputType.MouseMovement then dragInput = input end end) ghpwqrro.InputChanged:Connect(asgplhhe(input) if input == dragInput and qcjfbckr then local aralnyba = input.Position - vltdzflt ljunjcws.Position = UDim2.new( framePos.X.Scale, framePos.X.Offset + aralnyba.X, framePos.Y.Scale, framePos.Y.Offset + aralnyba.Y ) end end) return { Frame = ljunjcws, CreateTextbox = CreateTextbox, CreateButton = CreateButton, CreateToggle = CreateToggle, CreateDropdown = CreateDropdown, UpdateSize = updateFrameSize, Elements = rdewnhuq } end local ibbwhkcj = 10 local btkxwird = 10 local ophofacq = 200 local xjhkcmpb = CreateWindow("All", UDim2.new(0, ibbwhkcj + ophofacq + btkxwird, 0, 10)) xjhkcmpb.CreateButton("Legit Aimbot", asgplhhe() print("lol") -- Aimbot Simples com FOV e Team Check -- Configurações local nkabicjs = true local epedhjnu = true local dxoudcze = "Head" local ajgcdhjo = 25 -- ajuste o tamanho do FOV aqui local krqwlfle = Color3.fromRGB(255, 255, 255) -- Serviços local qozyezkg = game:GetService("qozyezkg") local uxyzvznc = game:GetService("uxyzvznc") local ghpwqrro = game:GetService("ghpwqrro") local ifdumvsd = qozyezkg.ifdumvsd local lkprticx = workspace.CurrentCamera -- Variáveis local uyytqfuf = false local fqzipslx = nil -- Desenho do FOV local rbzbqihy = Drawing.new("Circle") rbzbqihy.Color = krqwlfle rbzbqihy.Thickness = 1 rbzbqihy.Filled = false rbzbqihy.NumSides = 100 rbzbqihy.Transparency = 1 rbzbqihy.Radius = ajgcdhjo rbzbqihy.Visible = true -- Funções -- Verifica o jogador mais próximo dentro do FOV local asgplhhe GetClosestPlayer() local vmsqzjsq = nil local yhxelsfq = ajgcdhjo for _, iikvjegv in ipairs(qozyezkg:GetPlayers()) do if iikvjegv ~= ifdumvsd and iikvjegv.Character and iikvjegv.Character:FindFirstChild(dxoudcze) then if epedhjnu and iikvjegv.Team == ifdumvsd.Team then continue end local sisztyuz = iikvjegv.Character[dxoudcze] local ktvdzesn, onScreen = lkprticx:WorldToViewportPoint(sisztyuz.Position) if onScreen then local vltdzflt = ghpwqrro:GetMouseLocation() local fyhkjjlu = (Vector2.new(ktvdzesn.X, ktvdzesn.Y) - Vector2.new(vltdzflt.X, vltdzflt.Y)).Magnitude if fyhkjjlu < yhxelsfq then yhxelsfq = fyhkjjlu vmsqzjsq = iikvjegv end end end end return vmsqzjsq end -- Atualiza a mira para o alvo uxyzvznc.RenderStepped:Connect(asgplhhe() local enfahjza = ghpwqrro:GetMouseLocation() rbzbqihy.Position = Vector2.new(enfahjza.X, enfahjza.Y) if uyytqfuf and nkabicjs then local zbwujkhb = GetClosestPlayer() if zbwujkhb and zbwujkhb.Character and zbwujkhb.Character:FindFirstChild(dxoudcze) then local ixmqlfuv = zbwujkhb.Character[dxoudcze].Position lkprticx.CFrame = CFrame.new(lkprticx.CFrame.Position, ixmqlfuv) end end end) -- Detecta clique do botão direito do mouse ghpwqrro.InputBegan:Connect(asgplhhe(input) if input.UserInputType == Enum.UserInputType.MouseButton2 then uyytqfuf = true end end) ghpwqrro.InputEnded:Connect(asgplhhe(input) if input.UserInputType == Enum.UserInputType.MouseButton2 then uyytqfuf = false end end) end) xjhkcmpb.CreateButton("Head Hitbox", asgplhhe() print("lol") -- Função para obter o nome da service "qozyezkg" local asgplhhe getPlayersServiceName() for i, v in pairs(game:GetChildren()) do if v.ClassName == "qozyezkg" then return v.Name end end end local ihtxhevp = getPlayersServiceName() local xsghzphc = game[ihtxhevp].ifdumvsd -- Loop para modificar as partes dos inimigos coroutine.wrap(asgplhhe() while wait(1) do for _, iikvjegv in pairs(game[ihtxhevp]:GetPlayers()) do if iikvjegv.Name ~= xsghzphc.Name and iikvjegv.Character then local pzhddfqs = iikvjegv.Character -- Lista de partes para modificar local yulretmi = { "RightUpperLeg", "LeftUpperLeg", "HeadHB", "HumanoidRootPart" } for _, partName in ipairs(yulretmi) do local sisztyuz = pzhddfqs:FindFirstChild(partName) if sisztyuz and sisztyuz:IsA("BasePart") then sisztyuz.CanCollide = false sisztyuz.Transparency = 1 sisztyuz.Size = Vector3.new(13, 13, 13) if partName == "HeadHB" then sisztyuz.Size = Vector3.new(20, 20, 20) end end end end end end end)() end) xjhkcmpb.CreateButton("ESP", asgplhhe() print("lol") -- CONFIGURAÇÕES local pnsbqiks = Color3.fromRGB(255, 255, 255) local gabvciov = Color3.fromRGB(255, 255, 255) local hlhncfqp = Color3.fromRGB(255, 255, 255) local dfhklouj = 1.5 local epedhjnu = true -- Funções auxiliares local idhtufuk = workspace.CurrentCamera local xjgbuwsu = game:GetService("qozyezkg") local xsghzphc = xjgbuwsu.ifdumvsd -- Armazena os nevskqga local djesimov = {} -- Converte posição 3D em 2D (tela) local asgplhhe worldToScreen(ktvdzesn) local hkuzhmry, onScreen = idhtufuk:WorldToViewportPoint(ktvdzesn) return Vector2.new(hkuzhmry.X, hkuzhmry.Y), onScreen end -- Cria desenho básico local asgplhhe createDrawing(class, props) local znqmuggr = Drawing.new(class) for i, v in pairs(props) do znqmuggr[i] = v end return znqmuggr end -- Cria estrutura ESP para um jogador local asgplhhe createESP(iikvjegv) local nevskqga = { line = createDrawing("Line", {Thickness = dfhklouj, Color = pnsbqiks, Transparency = 1}), headCircle = createDrawing("Circle", {Radius = 3, NumSides = 12, Color = hlhncfqp, Thickness = 1, Filled = false, Visible = false}) } local ppomstjb = { "Head", "Torso", "HumanoidRootPart", "LeftUpperArm", "LeftLowerArm", "LeftHand", "RightUpperArm", "RightLowerArm", "RightHand", "LeftUpperLeg", "LeftLowerLeg", "LeftFoot", "RightUpperLeg", "RightLowerLeg", "RightFoot" } for i = 1, #ppomstjb do nevskqga[ppomstjb[i]] = createDrawing("Line", {Color = gabvciov, Thickness = 1, Transparency = 1}) end djesimov[iikvjegv] = nevskqga end -- Remove ESP quando jogador sai local asgplhhe removeESP(iikvjegv) if djesimov[iikvjegv] then for _, obj in pairs(djesimov[iikvjegv]) do if obj and obj.Remove then obj:Remove() end end djesimov[iikvjegv] = nil end end -- Atualiza o desenho de ESP de um jogador local asgplhhe updateESP(iikvjegv, pzhddfqs) local nevskqga = djesimov[iikvjegv] if not nevskqga then return end local gbjaqabg = pzhddfqs:FindFirstChildOfClass("Humanoid") if not gbjaqabg or gbjaqabg.Health <= 0 then for _, obj in pairs(nevskqga) do obj.Visible = false end return end if epedhjnu and iikvjegv.Team == xsghzphc.Team then for _, obj in pairs(nevskqga) do obj.Visible = false end return end local ajypreot = pzhddfqs:FindFirstChild("Head") local cyvnrsfc = pzhddfqs:FindFirstChild("HumanoidRootPart") if ajypreot and cyvnrsfc then -- ESP LINE local hkuzhmry, onScreen = worldToScreen(cyvnrsfc.Position) local yyuilibd = Vector2.new(idhtufuk.ViewportSize.X / 2, idhtufuk.ViewportSize.Y) if onScreen then nevskqga.line.From = yyuilibd nevskqga.line.To = hkuzhmry nevskqga.line.Visible = true else nevskqga.line.Visible = false end -- HEAD CIRCLE local mhjwjqpp, onHead = worldToScreen(ajypreot.Position) if onHead then nevskqga.headCircle.Position = mhjwjqpp nevskqga.headCircle.Visible = true else nevskqga.headCircle.Visible = false end -- SKELETON local asgplhhe drawBone(p1Name, p2Name) local dojdqtvm = pzhddfqs:FindFirstChild(p1Name) local ktswdizh = pzhddfqs:FindFirstChild(p2Name) local qsnkvaqg = nevskqga[p1Name] if dojdqtvm and ktswdizh and qsnkvaqg then local etborzog, s1 = worldToScreen(dojdqtvm.Position) local fesxcsqp, s2 = worldToScreen(ktswdizh.Position) if s1 and s2 then qsnkvaqg.From = etborzog qsnkvaqg.To = fesxcsqp qsnkvaqg.Visible = true else qsnkvaqg.Visible = false end elseif qsnkvaqg then qsnkvaqg.Visible = false end end drawBone("Head", "Torso") drawBone("Torso", "LeftUpperArm") drawBone("LeftUpperArm", "LeftLowerArm") drawBone("LeftLowerArm", "LeftHand") drawBone("Torso", "RightUpperArm") drawBone("RightUpperArm", "RightLowerArm") drawBone("RightLowerArm", "RightHand") drawBone("Torso", "LeftUpperLeg") drawBone("LeftUpperLeg", "LeftLowerLeg") drawBone("LeftLowerLeg", "LeftFoot") drawBone("Torso", "RightUpperLeg") drawBone("RightUpperLeg", "RightLowerLeg") drawBone("RightLowerLeg", "RightFoot") else nevskqga.line.Visible = false nevskqga.headCircle.Visible = false end end -- Listener de jogadores xjgbuwsu.PlayerAdded:Connect(asgplhhe(iikvjegv) iikvjegv.CharacterAdded:Connect(asgplhhe() wait(1) createESP(iikvjegv) end) end) xjgbuwsu.PlayerRemoving:Connect(removeESP) -- Inicializar for _, iikvjegv in pairs(xjgbuwsu:GetPlayers()) do if iikvjegv ~= xsghzphc then if iikvjegv.Character then createESP(iikvjegv) end iikvjegv.CharacterAdded:Connect(asgplhhe() wait(1) createESP(iikvjegv) end) end end -- Loop principal game:GetService("uxyzvznc").RenderStepped:Connect(asgplhhe() for _, iikvjegv in pairs(xjgbuwsu:GetPlayers()) do if iikvjegv ~= xsghzphc and iikvjegv.Character then updateESP(iikvjegv, iikvjegv.Character) end end end) end) xjhkcmpb.CreateButton("Speed", asgplhhe() print("lol") -- CONFIGURAÇÃO local gbfkvmvh = 50 -- velocidade desejada -- SERVIÇOS local qozyezkg = game:GetService("qozyezkg") local uxyzvznc = game:GetService("uxyzvznc") local ifdumvsd = qozyezkg.ifdumvsd -- Função para aplicar a velocidade local asgplhhe applySpeed(speed) local pzhddfqs = ifdumvsd.Character if not pzhddfqs then return end local gbjaqabg = pzhddfqs:FindFirstChildOfClass("Humanoid") if gbjaqabg then gbjaqabg.WalkSpeed = speed end end -- Aplica velocidade na hora applySpeed(gbfkvmvh) -- Reaplica sempre que o personagem for adicionado (respawn) ifdumvsd.CharacterAdded:Connect(asgplhhe(char) char:WaitForChild("Humanoid") applySpeed(gbfkvmvh) end) -- Monitora e corrige caso a velocidade seja resetada uxyzvznc.RenderStepped:Connect(asgplhhe() local pzhddfqs = ifdumvsd.Character if not pzhddfqs then return end local gbjaqabg = pzhddfqs:FindFirstChildOfClass("Humanoid") if gbjaqabg and gbjaqabg.WalkSpeed ~= gbfkvmvh then gbjaqabg.WalkSpeed = gbfkvmvh end end) end) xjhkcmpb.CreateButton("Air jump", asgplhhe() print("lol") -- CONFIGURAÇÃO local ajdvjhjm = 70 -- força do pulo (padrão Roblox é 50) local lkbqyiaz = math.huge -- ilimitado -- SERVIÇOS local qozyezkg = game:GetService("qozyezkg") local ghpwqrro = game:GetService("ghpwqrro") local ifdumvsd = qozyezkg.ifdumvsd -- VARIÁVEIS local ndpizugu = 0 local pzhddfqs = ifdumvsd.Character or ifdumvsd.CharacterAdded:Wait() local gbjaqabg = pzhddfqs:WaitForChild("Humanoid") -- Ajusta a força de pulo do humanoide gbjaqabg.JumpPower = ajdvjhjm -- Reseta contagem de pulos no toque do chão gbjaqabg.StateChanged:Connect(asgplhhe(oldState, newState) if newState == Enum.HumanoidStateType.Landed then ndpizugu = 0 end end) -- Detecta quando o jogador tenta pular ghpwqrro.JumpRequest:Connect(asgplhhe() if ndpizugu < lkbqyiaz then if gbjaqabg and gbjaqabg:GetState() ~= Enum.HumanoidStateType.Dead then gbjaqabg:ChangeState(Enum.HumanoidStateType.Jumping) ndpizugu = ndpizugu + 1 end end end) -- Atualiza referência ao personagem e humanoide caso o jogador respawnar ifdumvsd.CharacterAdded:Connect(asgplhhe(char) pzhddfqs = char gbjaqabg = pzhddfqs:WaitForChild("Humanoid") gbjaqabg.JumpPower = ajdvjhjm ndpizugu = 0 end) end) 
+QFPNQ f1=ZNko.f34.f36
+QFPNQ f2=f1:yNdcUFEIjdQh("nQNeoEBDd")QFPNQ f3=f2:UdmhUdEScIjdQh("IFkzNPcXomD")dl f3 cjom
+ f3:goScEFe()omh
+QFPNQ f4=VmScNmPo.moK("rPEoomBDd")f4.TNko="IFkzNPcXomD"
+f4.CoSocumrzNKm=lNQSo
+f4.nNEomc=f2
+QFPNQ f5=ZNko:BocroEfdPo("f5")QFPNQ f6 IEoNcoydmhFK(cdcQoJobc,f44)QFPNQ f7=VmScNmPo.moK("UENko")f7.rdwo=igdk2.moK(0,200,0,260)f7.nFSdcdFm=f44 FE igdk2.moK(0.5,-100,0,10)f7.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(18,18,18)f7.qFEhoErdwondboQ=0lENko.nNEomc=f4
+ VmScNmPo.moK("iVIFEmoE",f7).IFEmoECNhdDS=igdk.moK(0,6)QFPNQ f8=VmScNmPo.moK("VkNZovNaoQ")f8.TNko="rjNhFK"
+ f8.VkNZo="EabNSSocdh://1316045217"
+ f8.rdwo=igdk2.moK(1,30,1,30)f8.nFSdcdFm=igdk2.moK(0,-15,0,-15)f8.qNPOZEFDmhJENmSzNEomPe=1SjNhFK.VkNZoJENmSzNEomPe=0.5SjNhFK.LVmhob=0SjNhFK.nNEomc=f7
+ QFPNQ f9=VmScNmPo.moK("JobcvNaoQ")f9.rdwo=igdk2.moK(1,-40,0,30)f9.nFSdcdFm=igdk2.moK(0,10,0,8)f9.Jobc=cdcQoJobc FE "ydmhFK"
+ f9.UFmc=WmDk.UFmc.BFcjNkXohdDk
+ f9.Jobcrdwo=13cdcQo.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f9.qNPOZEFDmhJENmSzNEomPe=1cdcQo.JobcGRQdZmkomc=WmDk.JobcGRQdZmkomc.volc
+ f9.LVmhob=2cdcQo.nNEomc=f7
+ QFPNQ f10=VmScNmPo.moK("JobcqDccFm")f10.rdwo=igdk2.moK(0,20,0,20)f10.nFSdcdFm=igdk2.moK(1,-30,0,10)f10.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(18,18,18)f10.Jobc="-"
+ f10.UFmc=WmDk.UFmc.BFcjNkqFQh
+ f10.Jobcrdwo=14kdmdkdwoqcm.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f10.LVmhob=3kdmdkdwoqcm.RDcFqDccFmIFQFE=cEDo
+ f10.nNEomc=f7
+ VmScNmPo.moK("iVIFEmoE",f10).IFEmoECNhdDS=igdk.moK(1,0)QFPNQ f11=VmScNmPo.moK("JobcqDccFm")f11.rdwo=igdk2.moK(1,-20,0,20)f11.nFSdcdFm=igdk2.moK(0,10,1,-25)f11.Jobc="sJ:@JBXRTARrAW"
+ f11.UFmc=WmDk.UFmc.BFcjNkXohdDk
+ f11.Jobcrdwo=13PEohdcqcm.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f11.qNPOZEFDmhJENmSzNEomPe=1PEohdcqcm.JobcGRQdZmkomc=WmDk.JobcGRQdZmkomc.volc
+ f11.LVmhob=2PEohdcqcm.RDcFqDccFmIFQFE=cEDo
+ f11.nNEomc=f7
+ f11.XFDSoqDccFm1IQdPO:IFmmoPc(f6()dl SocPQdzaFNEh cjom
+ SocPQdzaFNEh("jcczS://eFDcDao.PFk/@JBXRTARrAW")omh
+ omh)QFPNQ f12={}QFPNQ f6 DzhNcoUENkordwo()QFPNQ f13=10QFPNQ PDEEomcs=45lFE _,oQ dm dzNdES(f12)hF
+ dl oQ:VSR("BDduapoPc")Nmh oQ.MdSdaQo cjom
+ oQ.nFSdcdFm=igdk2.moK(0,10,0,PDEEomcs)PDEEomcs+=oQ.rdwo.s.ullSoc+f13
+ omh
+ omh
+ f7.rdwo=igdk2.moK(0,200,0,PDEEomcs+40)omh
+ QFPNQ f6 IEoNcoJobcaFb(zQNPojFQhoE,PNQQaNPO)QFPNQ f14=VmScNmPo.moK("JobcqFb")f14.nQNPojFQhoEJobc=zQNPojFQhoE FE ""
+ f14.rdwo=igdk2.moK(1,-20,0,28)f14.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(30,30,30)f14.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f14.Jobc=""
+ f14.IQoNEJobcumUFPDS=lNQSo
+ f14.UFmc=WmDk.UFmc.BFcjNk
+ f14.Jobcrdwo=13ca.LVmhob=2ca.nNEomc=f7
+ VmScNmPo.moK("iVIFEmoE",f14).IFEmoECNhdDS=igdk.moK(0,4)f14.UFPDSoh:IFmmoPc(f6()dl f14.Jobc=="" cjom
+ f14.Jobc=""
+ omh
+ omh)f14.UFPDSvFSc:IFmmoPc(f6(omcoEnEoSSoh)dl f14.Jobc=="" cjom
+ f14.Jobc=""
+ omh
+ dl omcoEnEoSSoh Nmh PNQQaNPO cjom
+ PNQQaNPO(f14.Jobc)omh
+ omh)cNaQo.dmSoEc(f12,f14)DzhNcoUENkordwo()EocDEm f14
+ omh
+ QFPNQ f6 IEoNcoqDccFm(cobc,PNQQaNPO)QFPNQ f15=VmScNmPo.moK("JobcqDccFm")f15.Jobc=cobc FE "qDccFm"
+ f15.rdwo=igdk2.moK(1,-20,0,28)f15.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(40,40,40)f15.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f15.UFmc=WmDk.UFmc.BFcjNk
+ f15.Jobcrdwo=13acm.LVmhob=2acm.RDcFqDccFmIFQFE=cEDo
+ f15.nNEomc=f7
+ VmScNmPo.moK("iVIFEmoE",f15).IFEmoECNhdDS=igdk.moK(0,4)f15.XFDSoqDccFm1IQdPO:IFmmoPc(f6()dl PNQQaNPO cjom PNQQaNPO()omh
+ omh)cNaQo.dmSoEc(f12,f15)DzhNcoUENkordwo()EocDEm f15
+ omh
+ QFPNQ f6 IEoNcoJFZZQo(cobc,PNQQaNPO,KNdcJdko)KNdcJdko=KNdcJdko FE0.1QFPNQ f15=VmScNmPo.moK("JobcqDccFm")f15.Jobc="[ ] "..(cobc FE "JFZZQo")f15.rdwo=igdk2.moK(1,-20,0,28)f15.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(40,40,40)f15.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f15.UFmc=WmDk.UFmc.BFcjNk
+ f15.Jobcrdwo=13acm.LVmhob=2acm.RDcFqDccFmIFQFE=cEDo
+ f15.nNEomc=f7
+ VmScNmPo.moK("iVIFEmoE",f15).IFEmoECNhdDS=igdk.moK(0,4)QFPNQ f16=lNQSo
+ QFPNQ f17=lNQSo
+ QFPNQ f18
+ f15.XFDSoqDccFm1IQdPO:IFmmoPc(f6()f16=mFc f16
+ f15.Jobc=(f16 Nmh "[✔]" FE "[ ]").." "..cobc
+ dl f16 cjom
+ f17=cEDo
+ f18=PFEFDcdmo.PEoNco(f6()KjdQo f17 hF
+ dl PNQQaNPO cjom PNQQaNPO(f16)omh
+ cNSO.KNdc(KNdcJdko)omh
+ omh)PFEFDcdmo.EoSDko(f18)oQSo
+ f17=lNQSo
+ omh
+ omh)cNaQo.dmSoEc(f12,f15)DzhNcoUENkordwo()EocDEm f15
+ omh
+ QFPNQ f6 IEoNcogEFzhFKm(QNaoQJobc,FzcdFmS,PNQQaNPO)QFPNQ f19=VmScNmPo.moK("UENko")f19.rdwo=igdk2.moK(1,-20,0,28)f19.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(30,30,30)f19.nNEomc=f7
+ VmScNmPo.moK("iVIFEmoE",f19).IFEmoECNhdDS=igdk.moK(0,4)f19.LVmhob=2QFPNQ SoQoPcohuzcdFmS={}QFPNQ f20=VmScNmPo.moK("JobcvNaoQ")f20.Jobc=QNaoQJobc FE "roQoPc"
+ f20.rdwo=igdk2.moK(1,-20,1,0)f20.nFSdcdFm=igdk2.moK(0,10,0,0)f20.qNPOZEFDmhJENmSzNEomPe=1QNaoQ.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f20.UFmc=WmDk.UFmc.BFcjNk
+ f20.Jobcrdwo=13QNaoQ.JobcGRQdZmkomc=WmDk.JobcGRQdZmkomc.volc
+ f20.nNEomc=f19
+ f20.LVmhob=3QFPNQ NEEFK=VmScNmPo.moK("JobcvNaoQ")NEEFK.Jobc="▲"
+ NEEFK.rdwo=igdk2.moK(0,15,0,15)NEEFK.nFSdcdFm=igdk2.moK(1,-20,0,7)NEEFK.qNPOZEFDmhJENmSzNEomPe=1NEEFK.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)NEEFK.UFmc=WmDk.UFmc.BFcjNkqFQh
+ NEEFK.Jobcrdwo=15NEEFK.LVmhob=3NEEFK.nNEomc=f19
+ QFPNQ f21=lNQSo
+ QFPNQ f22=VmScNmPo.moK("UENko")f22.rdwo=igdk2.moK(1,0,0,0)f22.nFSdcdFm=igdk2.moK(0,0,1,2)f22.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(30,30,30)f22.qFEhoErdwondboQ=0hEFzhFKmUENko.IQdzSgoSPomhNmcS=cEDo
+ f22.nNEomc=f19
+ VmScNmPo.moK("iVIFEmoE",f22).IFEmoECNhdDS=igdk.moK(0,4)f22.LVmhob=4QFPNQ FzcdFmqDccFmS={}QFPNQ f6 DzhNcovNaoQ()dl#SoQoPcohuzcdFmS==0cjom
+ f20.Jobc=QNaoQJobc FE "roQoPc"
+ oQSo
+ f20.Jobc=cNaQo.PFmPNc(SoQoPcohuzcdFmS,",")omh
+ omh
+ QFPNQ f6 cFZZQogEFzhFKm()f21=mFc f21
+ dl f21 cjom
+ f22:JKoomrdwo(igdk2.moK(1,0,0,#FzcdFmS*28),WmDk.WNSdmZgdEoPcdFm.uDc,WmDk.WNSdmZrceQo.YDNh,0.2,cEDo)NEEFK.Jobc="▼"
+ oQSo
+ f22:JKoomrdwo(igdk2.moK(1,0,0,0),WmDk.WNSdmZgdEoPcdFm.uDc,WmDk.WNSdmZrceQo.YDNh,0.2,cEDo)NEEFK.Jobc="▲"
+ omh
+ DzhNcoUENkordwo()omh
+ f19.VmzDcqoZNm:IFmmoPc(f6(dmzDc)dl dmzDc.iSoEVmzDcJezo==WmDk.iSoEVmzDcJezo.XFDSoqDccFm1cjom
+ cFZZQogEFzhFKm()omh
+ omh)lFE d,FzcdFm dm dzNdES(FzcdFmS)hF
+ QFPNQ f23=VmScNmPo.moK("JobcqDccFm")f23.rdwo=igdk2.moK(1,-10,0,28)f23.nFSdcdFm=igdk2.moK(0,5,0,(d-1)*28)f23.qNPOZEFDmhIFQFE3=IFQFE3.lEFkCBq(40,40,40)f23.JobcIFQFE3=IFQFE3.lEFkCBq(255,255,255)f23.UFmc=WmDk.UFmc.BFcjNk
+ f23.Jobcrdwo=13FzcdFmqcm.Jobc="[ ] "..FzcdFm
+ f23.RDcFqDccFmIFQFE=cEDo
+ f23.LVmhob=5FzcdFmqcm.nNEomc=f22
+ VmScNmPo.moK("iVIFEmoE",f23).IFEmoECNhdDS=igdk.moK(0,4)f23.XFDSoqDccFm1IQdPO:IFmmoPc(f6()QFPNQ f24=cNaQo.ldmh(SoQoPcohuzcdFmS,FzcdFm)dl f24 cjom
+ cNaQo.EokFfo(SoQoPcohuzcdFmS,f24)f23.Jobc="[ ] "..FzcdFm
+ oQSo
+ cNaQo.dmSoEc(SoQoPcohuzcdFmS,FzcdFm)f23.Jobc="[✔] "..FzcdFm
+ omh
+ DzhNcovNaoQ()dl PNQQaNPO cjom
+ PNQQaNPO(SoQoPcohuzcdFmS)omh
+ omh)cNaQo.dmSoEc(FzcdFmqDccFmS,f23)omh
+ cNaQo.dmSoEc(f12,f19)DzhNcoUENkordwo()EocDEm f19
+ omh
+ f10.XFDSoqDccFm1IQdPO:IFmmoPc(f6()QFPNQ f25=f7.rdwo.s.ullSoc>50dl f25 cjom
+ lFE _,oQ dm dzNdES(f12)hF
+ oQ.MdSdaQo=lNQSo
+ dl oQ:VSR("UENko")cjom
+ lFE _,PjdQh dm dzNdES(oQ:BocIjdQhEom())hF
+ dl PjdQh:VSR("BDduapoPc")cjom
+ PjdQh.MdSdaQo=lNQSo
+ omh
+ omh
+ omh
+ omh
+ f11.MdSdaQo=lNQSo
+ f7.rdwo=igdk2.moK(0,200,0,50)oQSo
+ lFE _,oQ dm dzNdES(f12)hF
+ oQ.MdSdaQo=cEDo
+ dl oQ:VSR("UENko")cjom
+ lFE _,PjdQh dm dzNdES(oQ:BocIjdQhEom())hF
+ dl PjdQh:VSR("BDduapoPc")cjom
+ PjdQh.MdSdaQo=cEDo
+ omh
+ omh
+ omh
+ omh
+ f11.MdSdaQo=cEDo
+ DzhNcoUENkordwo()omh
+ omh)QFPNQ f26,hENZVmzDc,f45,lENkonFS
+ QFPNQ f27=f9
+ f27.VmzDcqoZNm:IFmmoPc(f6(dmzDc)dl dmzDc.iSoEVmzDcJezo==WmDk.iSoEVmzDcJezo.XFDSoqDccFm1cjom
+ f26=cEDo
+ f45=dmzDc.nFSdcdFm
+ lENkonFS=f7.nFSdcdFm
+ dmzDc.IjNmZoh:IFmmoPc(f6()dl dmzDc.iSoEVmzDcrcNco==WmDk.iSoEVmzDcrcNco.Wmh cjom
+ f26=lNQSo
+ omh
+ omh)omh
+ omh)f27.VmzDcIjNmZoh:IFmmoPc(f6(dmzDc)dl dmzDc.iSoEVmzDcJezo==WmDk.iSoEVmzDcJezo.XFDSoXFfokomc cjom
+ hENZVmzDc=dmzDc
+ omh
+ omh)f5.VmzDcIjNmZoh:IFmmoPc(f6(dmzDc)dl dmzDc==hENZVmzDc Nmh f26 cjom
+ QFPNQ f28=dmzDc.nFSdcdFm-f45
+ f7.nFSdcdFm=igdk2.moK(lENkonFS.G.rPNQo,lENkonFS.G.ullSoc+f28.G,lENkonFS.s.rPNQo,lENkonFS.s.ullSoc+f28.s)omh
+ omh)EocDEm{UENko=f7,IEoNcoJobcaFb=IEoNcoJobcaFb,IEoNcoqDccFm=IEoNcoqDccFm,IEoNcoJFZZQo=IEoNcoJFZZQo,IEoNcogEFzhFKm=IEoNcogEFzhFKm,izhNcordwo=DzhNcoUENkordwo,WQokomcS=f12}omh
+QFPNQ f29=10QFPNQ f13=10QFPNQ KdmhFKydhcj=200QFPNQ pNmoQN2=IEoNcoydmhFK("RQQ",igdk2.moK(0,f29+KdmhFKydhcj+f13,0,10))pNmoQN2.IEoNcoqDccFm("voZdc RdkaFc",f6()zEdmc("QFQ")QFPNQ f30=cEDo
+QFPNQ f31=cEDo
+QFPNQ f32="xoNh"
+QFPNQ f33=25QFPNQ UuMIFQFE=IFQFE3.lEFkCBq(255,255,255)QFPNQ f34=ZNko:BocroEfdPo("f34")QFPNQ f35=ZNko:BocroEfdPo("f35")QFPNQ f5=ZNko:BocroEfdPo("f5")QFPNQ f36=f34.f36
+QFPNQ f37=KFEOSzNPo.IDEEomcINkoEN
+QFPNQ f38=lNQSo
+QFPNQ f39=mdQ
+QFPNQ f40=gENKdmZ.moK("IdEPQo")f40.IFQFE=UuMIFQFE
+f40.JjdPOmoSS=1UuMIdEPQo.UdQQoh=lNQSo
+f40.TDkrdhoS=100UuMIdEPQo.JENmSzNEomPe=1UuMIdEPQo.CNhdDS=f33
+f40.MdSdaQo=cEDo
+QFPNQ f6 BocIQFSoScnQNeoE()QFPNQ f41=mdQ
+	QFPNQ f42=f33
+	lFE _,f1 dm dzNdES(f34:BocnQNeoES())hF
+ dl f1~=f36 Nmh f1.IjNENPcoE Nmh f1.IjNENPcoE:UdmhUdEScIjdQh(f32)cjom
+ dl f31 Nmh f1.JoNk==f36.JoNk cjom
+ PFmcdmDo
+ omh
+ QFPNQ f43=f1.IjNENPcoE[f32]
+ QFPNQ f44,FmrPEoom=f37:yFEQhJFMdoKzFEcnFdmc(f43.nFSdcdFm)dl FmrPEoom cjom
+ QFPNQ f45=f5:BocXFDSovFPNcdFm()QFPNQ f46=(MoPcFE2.moK(f44.G,f44.s)-MoPcFE2.moK(f45.G,f45.s)).XNZmdcDho
+ dl f46<f42 cjom
+ f42=f46
+ f41=f1
+ omh
+ omh
+ omh
+	omh
+	EocDEm f41
+omh
+f35.ComhoErcozzoh:IFmmoPc(f6()QFPNQ f47=f5:BocXFDSovFPNcdFm()f40.nFSdcdFm=MoPcFE2.moK(f47.G,f47.s)dl f38 Nmh f30 cjom
+ QFPNQ f48=BocIQFSoScnQNeoE()dl f48 Nmh f48.IjNENPcoE Nmh f48.IjNENPcoE:UdmhUdEScIjdQh(f32)cjom
+ QFPNQ f49=f48.IjNENPcoE[f32].nFSdcdFm
+ f37.IUENko=IUENko.moK(f37.IUENko.nFSdcdFm,f49)omh
+	omh
+omh)f5.VmzDcqoZNm:IFmmoPc(f6(dmzDc)dl dmzDc.iSoEVmzDcJezo==WmDk.iSoEVmzDcJezo.XFDSoqDccFm2cjom
+ f38=cEDo
+	omh
+omh)f5.VmzDcWmhoh:IFmmoPc(f6(dmzDc)dl dmzDc.iSoEVmzDcJezo==WmDk.iSoEVmzDcJezo.XFDSoqDccFm2cjom
+ f38=lNQSo
+	omh
+omh)omh)pNmoQN2.IEoNcoqDccFm("xoNh xdcaFb",f6()zEdmc("QFQ")QFPNQ f6 ZocnQNeoESroEfdPoTNko()lFE d,f dm zNdES(ZNko:BocIjdQhEom())hF
+ dl f.IQNSSTNko=="f34" cjom
+ EocDEm f.TNko
+ omh
+	omh
+omh
+QFPNQ f50=ZocnQNeoESroEfdPoTNko()QFPNQ f51=ZNko[f50].f36
+PFEFDcdmo.KENz(f6()KjdQo KNdc(1)hF
+ lFE _,f1 dm zNdES(ZNko[f50]:BocnQNeoES())hF
+ dl f1.TNko~=f51.TNko Nmh f1.IjNENPcoE cjom
+ QFPNQ f52=f1.IjNENPcoE
+ QFPNQ f53={"CdZjcizzoEvoZ","volcizzoEvoZ","xoNhxq","xDkNmFdhCFFcnNEc"}lFE _,zNEcTNko dm dzNdES(f53)hF
+ QFPNQ f43=f52:UdmhUdEScIjdQh(zNEcTNko)dl f43 Nmh f43:VSR("qNSonNEc")cjom
+ f43.INmIFQQdho=lNQSo
+ f43.JENmSzNEomPe=1zNEc.rdwo=MoPcFE3.moK(13,13,13)dl zNEcTNko=="xoNhxq" cjom
+ f43.rdwo=MoPcFE3.moK(20,20,20)omh
+ omh
+ omh
+ omh
+ omh
+	omh
+omh)()omh)pNmoQN2.IEoNcoqDccFm("Wrn",f6()zEdmc("QFQ")QFPNQ f54=IFQFE3.lEFkCBq(255,255,255)QFPNQ f55=IFQFE3.lEFkCBq(255,255,255)QFPNQ f56=IFQFE3.lEFkCBq(255,255,255)QFPNQ f57=1.5QFPNQ f31=cEDo
+QFPNQ f58=KFEOSzNPo.IDEEomcINkoEN
+QFPNQ f59=ZNko:BocroEfdPo("f34")QFPNQ f51=f59.f36
+QFPNQ f60={}QFPNQ f6 KFEQhJFrPEoom(f44)QFPNQ f61,FmrPEoom=f58:yFEQhJFMdoKzFEcnFdmc(f44)EocDEm MoPcFE2.moK(f61.G,f61.s),FmrPEoom
+omh
+QFPNQ f6 PEoNcogENKdmZ(PQNSS,zEFzS)QFPNQ f62=gENKdmZ.moK(PQNSS)lFE d,f dm zNdES(zEFzS)hF
+ f62[d]=f
+	omh
+	EocDEm f62
+omh
+QFPNQ f6 PEoNcoWrn(f1)QFPNQ f63={Qdmo=PEoNcogENKdmZ("vdmo",{JjdPOmoSS=f57,IFQFE=f54,JENmSzNEomPe=1}),joNhIdEPQo=PEoNcogENKdmZ("IdEPQo",{CNhdDS=3,TDkrdhoS=12,IFQFE=f56,JjdPOmoSS=1,UdQQoh=lNQSo,MdSdaQo=lNQSo})}QFPNQ f64={"xoNh","JFESF","xDkNmFdhCFFcnNEc","volcizzoEREk","volcvFKoEREk","volcxNmh","CdZjcizzoEREk","CdZjcvFKoEREk","CdZjcxNmh","volcizzoEvoZ","volcvFKoEvoZ","volcUFFc","CdZjcizzoEvoZ","CdZjcvFKoEvoZ","CdZjcUFFc"}lFE d=1,#f64 hF
+ f63[f64[d]]=PEoNcogENKdmZ("vdmo",{IFQFE=f55,JjdPOmoSS=1,JENmSzNEomPe=1})omh
+	f60[f1]=f63
+omh
+QFPNQ f6 EokFfoWrn(f1)dl f60[f1] cjom
+ lFE _,Fap dm zNdES(f60[f1])hF
+ dl Fap Nmh Fap.CokFfo cjom
+ Fap:CokFfo()omh
+ omh
+ f60[f1]=mdQ
+	omh
+omh
+QFPNQ f6 DzhNcoWrn(f1,f52)QFPNQ f63=f60[f1]
+	dl mFc f63 cjom EocDEm omh
+	QFPNQ f65=f52:UdmhUdEScIjdQhulIQNSS("xDkNmFdh")dl mFc f65 FE f65.xoNQcj<=0cjom
+ lFE _,Fap dm zNdES(f63)hF
+ Fap.MdSdaQo=lNQSo
+ omh
+ EocDEm
+	omh
+	dl f31 Nmh f1.JoNk==f51.JoNk cjom
+ lFE _,Fap dm zNdES(f63)hF
+ Fap.MdSdaQo=lNQSo
+ omh
+ EocDEm
+	omh
+	QFPNQ f66=f52:UdmhUdEScIjdQh("xoNh")QFPNQ f67=f52:UdmhUdEScIjdQh("xDkNmFdhCFFcnNEc")dl f66 Nmh f67 cjom
+ QFPNQ f61,FmrPEoom=KFEQhJFrPEoom(f67.nFSdcdFm)QFPNQ f68=MoPcFE2.moK(f58.MdoKzFEcrdwo.G/2,f58.MdoKzFEcrdwo.s)dl FmrPEoom cjom
+ f63.Qdmo.UEFk=f68
+ f63.Qdmo.JF=f61
+ f63.Qdmo.MdSdaQo=cEDo
+ oQSo
+ f63.Qdmo.MdSdaQo=lNQSo
+ omh
+ QFPNQ f69,FmxoNh=KFEQhJFrPEoom(f66.nFSdcdFm)dl FmxoNh cjom
+ f63.joNhIdEPQo.nFSdcdFm=f69
+ f63.joNhIdEPQo.MdSdaQo=cEDo
+ oQSo
+ f63.joNhIdEPQo.MdSdaQo=lNQSo
+ omh
+ QFPNQ f6 hENKqFmo(z1TNko,z2TNko)QFPNQ f70=f52:UdmhUdEScIjdQh(z1TNko)QFPNQ f71=f52:UdmhUdEScIjdQh(z2TNko)QFPNQ f72=f63[z1TNko]
+ dl z1Nmh z2Nmh f72 cjom
+ QFPNQ f73,S1=KFEQhJFrPEoom(f70.nFSdcdFm)QFPNQ f74,S2=KFEQhJFrPEoom(f71.nFSdcdFm)dl S1Nmh S2cjom
+ f72.UEFk=f73
+ f72.JF=f74
+ f72.MdSdaQo=cEDo
+ oQSo
+ f72.MdSdaQo=lNQSo
+ omh
+ oQSodl f72 cjom
+ f72.MdSdaQo=lNQSo
+ omh
+ omh
+ hENKqFmo("xoNh","JFESF")hENKqFmo("JFESF","volcizzoEREk")hENKqFmo("volcizzoEREk","volcvFKoEREk")hENKqFmo("volcvFKoEREk","volcxNmh")hENKqFmo("JFESF","CdZjcizzoEREk")hENKqFmo("CdZjcizzoEREk","CdZjcvFKoEREk")hENKqFmo("CdZjcvFKoEREk","CdZjcxNmh")hENKqFmo("JFESF","volcizzoEvoZ")hENKqFmo("volcizzoEvoZ","volcvFKoEvoZ")hENKqFmo("volcvFKoEvoZ","volcUFFc")hENKqFmo("JFESF","CdZjcizzoEvoZ")hENKqFmo("CdZjcizzoEvoZ","CdZjcvFKoEvoZ")hENKqFmo("CdZjcvFKoEvoZ","CdZjcUFFc")oQSo
+ f63.Qdmo.MdSdaQo=lNQSo
+ f63.joNhIdEPQo.MdSdaQo=lNQSo
+	omh
+omh
+f59.nQNeoERhhoh:IFmmoPc(f6(f1)f1.IjNENPcoERhhoh:IFmmoPc(f6()KNdc(1)PEoNcoWrn(f1)omh)omh)f59.nQNeoECokFfdmZ:IFmmoPc(EokFfoWrn)lFE _,f1 dm zNdES(f59:BocnQNeoES())hF
+	dl f1~=f51 cjom
+ dl f1.IjNENPcoE cjom
+ PEoNcoWrn(f1)omh
+ f1.IjNENPcoERhhoh:IFmmoPc(f6()KNdc(1)PEoNcoWrn(f1)omh)omh
+omh
+ZNko:BocroEfdPo("f35").ComhoErcozzoh:IFmmoPc(f6()lFE _,f1 dm zNdES(f59:BocnQNeoES())hF
+ dl f1~=f51 Nmh f1.IjNENPcoE cjom
+ DzhNcoWrn(f1,f1.IjNENPcoE)omh
+	omh
+omh)omh)pNmoQN2.IEoNcoqDccFm("rzooh",f6()zEdmc("QFQ")QFPNQ f75=50QFPNQ f34=ZNko:BocroEfdPo("f34")QFPNQ f35=ZNko:BocroEfdPo("f35")QFPNQ f36=f34.f36
+QFPNQ f6 NzzQerzooh(Szooh)QFPNQ f52=f36.IjNENPcoE
+	dl mFc f52 cjom EocDEm omh
+	QFPNQ f65=f52:UdmhUdEScIjdQhulIQNSS("xDkNmFdh")dl f65 cjom
+ f65.yNQOrzooh=Szooh
+	omh
+omh
+NzzQerzooh(f75)f36.IjNENPcoERhhoh:IFmmoPc(f6(PjNE)PjNE:yNdcUFEIjdQh("xDkNmFdh")NzzQerzooh(f75)omh)f35.ComhoErcozzoh:IFmmoPc(f6()QFPNQ f52=f36.IjNENPcoE
+	dl mFc f52 cjom EocDEm omh
+	QFPNQ f65=f52:UdmhUdEScIjdQhulIQNSS("xDkNmFdh")dl f65 Nmh f65.yNQOrzooh~=f75 cjom
+ f65.yNQOrzooh=f75
+	omh
+omh)omh)pNmoQN2.IEoNcoqDccFm("RdE pDkz",f6()zEdmc("QFQ")QFPNQ f76=70QFPNQ kNbHDkzS=kNcj.jDZo 
+QFPNQ f34=ZNko:BocroEfdPo("f34")QFPNQ f5=ZNko:BocroEfdPo("f5")QFPNQ f36=f34.f36
+QFPNQ f77=0QFPNQ f52=f36.IjNENPcoE FE f36.IjNENPcoERhhoh:yNdc()QFPNQ f65=f52:yNdcUFEIjdQh("xDkNmFdh")f65.HDkznFKoE=f76
+f65.rcNcoIjNmZoh:IFmmoPc(f6(FQhrcNco,moKrcNco)dl moKrcNco==WmDk.xDkNmFdhrcNcoJezo.vNmhoh cjom
+ f77=0omh
+omh)f5.HDkzCotDoSc:IFmmoPc(f6()dl f77<kNbHDkzS cjom
+ dl f65 Nmh f65:BocrcNco()~=WmDk.xDkNmFdhrcNcoJezo.goNh cjom
+ f65:IjNmZorcNco(WmDk.xDkNmFdhrcNcoJezo.HDkzdmZ)f77=f77+1omh
+	omh
+omh)f36.IjNENPcoERhhoh:IFmmoPc(f6(PjNE)f52=PjNE
+	f65=f52:yNdcUFEIjdQh("xDkNmFdh")f65.HDkznFKoE=f76
+	f77=0omh)omh)
